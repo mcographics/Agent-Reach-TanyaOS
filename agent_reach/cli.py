@@ -2258,7 +2258,9 @@ def _is_newer_version(remote: str, local: str) -> bool:
     """
     def parse(v):
         try:
-            return tuple(int(x) for x in v.strip().split("."))
+            # PEP 440 local build tags identify forks, not a newer upstream
+            # release. Comparing the release part avoids downgrade prompts.
+            return tuple(int(x) for x in v.strip().split("+", 1)[0].split("."))
         except ValueError:
             return None
 

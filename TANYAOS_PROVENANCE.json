@@ -1,0 +1,9 @@
+{
+  "upstream": "https://github.com/Panniantong/Agent-Reach",
+  "upstream_commit": "a19a171fa980a0785849596492e0af4db800c82f",
+  "fork": "https://github.com/mcographics/Agent-Reach-TanyaOS",
+  "branch": "tanyaos-integration",
+  "license": "MIT",
+  "adapter": "agent_reach.tanya",
+  "scope": "Read-only public internet capabilities; TanyaOS kernel retains authority"
+}
